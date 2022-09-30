@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//     let user = {
+//         data:{name:prompt('Имя'),age:prompt('Возраст')},
+//         car:{mark:prompt('Марка'),model:prompt('модель'),engine:prompt('объем')},
+//         schowName(){
+// console.log(`${this.data.name} вам нравится ${this.car.mark}`)
+//             if(this.car.mark === 'bmw'){
+//                 console.log('Check your engine')
+//             }
+//         }
+//
+//     }
+//     user.schowName();
+
+//     class User {
+//         name = prompt('Имя');
+//         age = prompt('Возраст');
+//
+//         showUser(){
+//             // console.log(`${this.name}${this.age}`);
+//             console.log(user)
+//         }
+//
+//     }
+//     let user = new User();
+//     user.showUser();
+//
+//
+//     class Car {
+//         mark=prompt('Марка');
+//         model=prompt('модель');
+//         engine=prompt('объем');
+//         caruser = user;
+//         showCar(){
+//             console.log(car);
+//             if(this.mark==='bmw'){
+//                 console.log('Check engine')
+//             }
+//         }
+//     }
+//     let car = new Car();
+//     car.showCar();
+//
+// console.log(`${user.name} вам нравится ${car.mark}`)
+
+function User() {
+    this.name =prompt('Введите имя');
+    this.age =prompt('Введите возраст');
+
+    this.getUser = function (){
+        console.log(this);
+    }
+    
+}
+
+function Car() {
+    this.mark=prompt('Марка');
+    this.model=prompt('модель');
+    this.engine=prompt('объем');
+    this.setUser = function (user){
+        this.user=user;
+        console.log(this);
+        if(this.mark ==='bmw'){
+            console.log('Check Engine')
+        }
+    }
+}
+
+const user = new User();
+const car = new Car();
+
+user.getUser();
+car.setUser(user);
+console.log(`${user.name} ваш автомобиль ${car.mark}`);
+
+
+
+</script>
+
+</body>
+</html>
